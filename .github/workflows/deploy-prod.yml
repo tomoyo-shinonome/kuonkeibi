@@ -17,4 +17,3 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
           LOCAL_DIR: ./                           
           REMOTE_DIR: "fertility/www/kuonkeibi.fertility.co.jp/wp-content/themes/kuonkeibi/"
-

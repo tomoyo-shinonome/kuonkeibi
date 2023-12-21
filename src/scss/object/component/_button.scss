@@ -1,0 +1,220 @@
+.c-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: .1em;
+  font-size: 1.4rem;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background: $color_primary;
+  border: 1px solid $white;
+  border-radius: 2em;
+  color: $white;
+  span {
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease-out;
+    position: relative;
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-top: 1px solid $white;
+      border-right: 1px solid $white;
+      transform: rotate(45deg) translateY(-50%);
+      opacity: 0;
+      position: absolute;
+      right: 1%;
+      top: 50%;
+      transition: all 300ms ease-out;
+      will-change: right, opacity;
+    }
+  }
+  &:hover {
+    opacity: 1;
+
+    span {
+      transform: translate(-1em, 0);
+
+      &::after {
+        opacity: 1;
+        right: -3rem;
+      }
+    }
+  }
+  &__secondary {
+    color: $black;
+    border: 2px solid $black;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: .5em;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    span {
+      display: inline-block;
+      transition: all 300ms ease-out;
+      position: relative;
+      padding-top: .5rem;
+      &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid $black;
+        border-right: 1px solid $black;
+        transform: rotate(45deg) translateY(-50%);
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transition: all 300ms ease-out;
+        will-change: right, opacity;
+      }
+    }
+    &:hover {
+      opacity: 1;
+      span {
+        transform: translate(-1em, 0);
+
+        &::after {
+          opacity: 1;
+          right: -3rem;
+        }
+      }
+    }
+  }
+  &__arrow {
+    position: relative;
+    &::after {
+      font-family: "Font Awesome 5 Solid", sans-serif;
+      content: '\f30b';
+      display: none;
+      color: #fff;
+    }
+    &::before {
+      content: '';
+      border: 2px solid #fff;
+      border-radius: 2px;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 16px;
+    }
+    .fa-long-arrow-alt-right {
+      position: absolute;
+      right: 28px;
+    }
+  }
+  &Cta {
+    position: relative;
+    z-index: 3;
+    &__line {
+      position: fixed;
+      z-index: 4;
+      top: 70%;
+      right: -280px;
+      width: 280px;
+      height: 70px;
+      transition: .5s;
+      &.is_show {
+        transform: translate(-70px, 0);
+      }
+      &:hover {
+        transform: translate(-210px, 0);
+      }
+      > a {
+        background: #06C755;
+        border-radius: 10px 0 0 10px;
+        color: $white;
+        text-decoration: none;
+        line-height: 5em;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem;
+        .icon {
+          width: 60px;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .slideIn {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-left: 2rem;
+          padding: 0;
+        }
+      }
+    }
+    &__contact {
+      position: fixed;
+      z-index: 4;
+      top: 80%;
+      right: -280px;
+      width: 280px;
+      height: 70px;
+      transition: .5s;
+      &.is_show {
+        transform: translate(-70px, 0);
+      }
+      &:hover {
+        transform: translate(-210px, 0);
+      }
+      > a {
+        background: $color_secondary;
+        border-radius: 10px 0 0 10px;
+        color: $white;
+        text-decoration: none;
+        line-height: 5em;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem;
+
+        .icon {
+          width: 60px;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .slideIn {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-left: 2rem;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .c-button {
+    &Cta {
+      &__line {
+        top: 65%;
+      }
+    }
+  }
+}

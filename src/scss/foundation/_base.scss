@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  box-sizing:border-box;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: calc(1em * .625);
+}
+
+body {
+  font-family: 'Jost','Noto Sans JP', cursive,"メイリオ", Meiryo, sans-serif;
+  font-size: 1.6em;
+  line-height: 1.75;
+  color: $text_primary;
+  letter-spacing: 0.05em;
+  word-break: break-all;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+main {
+  display: block;
+}
+
+a {
+  color: $link_primary;
+  opacity: 1;
+  transition: .3s;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  border-width: 0;
+  border-color: transparent;
+}
+
+select {
+  border-width: 0;
+  border-color: transparent;
+}
+
+textarea {
+  resize: vertical;
+  border-width: 0;
+  border-color: transparent;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.pc {display: block !important;}
+.sp {display: none !important;}
+
+@media screen and (max-width: 768px) {
+  .pc {display: none !important;}
+  .sp {display: block !important;}
+}
+

@@ -1,0 +1,53 @@
+.c-card {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  margin-bottom: 8px;
+  &__pic {
+    width: 140px;
+    flex: 0 0 140px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__meta {
+    font-size: 14px;
+    &--date {
+      margin-right: 10px;
+    }
+    &--cat {
+      display: inline-block;
+      background-color: $color_secondary;
+      color: $white;
+      text-align: center;
+      padding: 0 3rem;
+      margin-right: 10px;
+      > a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    &--tag {
+      display: flex;
+      align-items: center;
+      > a {
+        color: $color_primary;
+        text-decoration: none;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "#";
+          margin-right: .2rem;
+        }
+      }
+    }
+  }
+  &__description {
+
+  }
+  &__btn {
+    text-align: right;
+  }
+}

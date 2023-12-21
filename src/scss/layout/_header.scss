@@ -1,0 +1,214 @@
+.l-header {
+  width: 100%;
+  height: 75px;
+  z-index: 3;
+  position: relative;
+  top: 0;
+  background: $color_primary;
+  &__wrap {
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: .5s;
+    &.is-scroll {
+      background: rgba(255, 255, 255, .6);
+      top: 0;
+      .l-navHeader__item {
+        > a {
+          color: $black;
+        }
+      }
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 3rem;
+    left: 10%;
+    &.page {
+      position: relative;
+      top: 0;
+      left: 0;
+      padding-left: 2rem;
+      width: 20%;
+      z-index: 2;
+    }
+    > a {
+      height: 75px;
+      z-index: 2;
+      color: $black;
+      text-decoration: none;
+      &.page {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &--image {
+      width: 154px;
+      height: 154px;
+      transition: .5s all;
+      &.page {
+        width: 60px;
+        height: 60px;
+        margin-right: 2rem;
+        transition: .5s all;
+      }
+    }
+
+  }
+  &__siteName {
+    text-align: center;
+    span {
+      color: $white;
+      display: block;
+      letter-spacing: .2rem;
+    }
+    &--ja {
+      font-size: 3rem;
+      &.page {
+        font-size: 2.4rem;
+      }
+    }
+    &--en {
+      font-size: 1.8rem;
+      &.page {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__menu {
+    flex: 0 0 60%;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .l-header {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background: $white;
+    z-index: 12;
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+      position: fixed;
+      height: 80px;
+      padding-right: 1rem;
+      &.is-scroll {
+        top: 0;
+      }
+    }
+    &__logo {
+      position: relative;
+      top: 0;
+      left: 0;
+      padding-left: 2rem;
+      width: 20%;
+      z-index: 2;
+      width: 80%;
+      background: $color_primary;
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      &--image {
+        width: 50px;
+        height: 50px;
+        margin-right: 2rem;
+      }
+      &.page {
+        width: 80%;
+        padding-left: 2rem;
+      }
+    }
+    &__siteName {
+      &--ja {
+        font-size: 2rem;
+        &.page {font-size: 2rem;}
+      }
+      &--en {
+        font-size: 1rem;
+        &.page {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__menu {
+      display: block;
+      width: 44px;
+      height: 44px;
+      position: relative;
+      margin-right: 0;
+      flex: 0 0 10%;
+    }
+    &__button {
+      position: absolute;
+      top: 9px;
+      right: 1rem;
+      width: 30px;
+      background-color: transparent;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      transition: all 0.4s ease;
+      z-index: 15;
+      span {
+        background-color: $black;
+        display: block;
+        width: 30px;
+        height: 2px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: $black;
+        top: -10px;
+        right: 0;
+        transition: all 0.4s ease;
+      }
+      &::after {
+        content: ' ';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: $black;
+        bottom: -10px;
+        right: 0;
+        transition: all 0.4s ease;
+      }
+    }
+    .is-active {
+      background: transparent;
+      span {
+        background: transparent;
+      }
+      &::before {
+        transform: rotate(-135deg);
+        top: 0;
+        right: 0;
+      }
+      &::after {
+        transform: rotate(135deg);
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.c-meta {
+  font-family: 'Noto Sans JP';
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1rem;
+  color: $black;
+  background: #dfdfdf;
+  margin-bottom: 3rem;
+  &__items {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &__item {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 16px 0 0;
+  }
+  &__ttl {
+    margin: 0;
+  }
+  &__desc {
+    margin: 0;
+  }
+}

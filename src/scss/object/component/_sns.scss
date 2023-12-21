@@ -1,0 +1,67 @@
+// SNS color {
+// twitter
+$sns_tw: #55acee;
+$sns_tw-hover: darken( $sns_tw, 10% );
+// line
+$sns_line: #00c300;
+$sns_line-hover: darken( $sns_line, 10% );
+
+.c-share {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    margin: 0 4px 4px 0;
+    display: block;
+    > a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: 4px;
+      height: 28px;
+    }
+    &--fecebook {
+
+    }
+    &--twitter {
+      > a {
+        background-color: $sns_tw;
+        &:hover {
+          background-color: $sns_tw-hover;
+        }
+      }
+    }
+    &--line {
+      > a {
+        background-color: $sns_line;
+        font-size: 1.3rem;
+        &:hover {
+          background-color: $sns_line-hover;
+        }
+      }
+    }
+  }
+}
+
+.l-social {
+  &Footer {
+    &__items {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    &__item {
+      color: $white;
+      font-size: 3.4rem;
+      &:nth-child(1) {
+        margin-right: 1em;
+      }
+    }
+  }
+}

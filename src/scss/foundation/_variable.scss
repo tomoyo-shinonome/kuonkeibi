@@ -1,0 +1,26 @@
+// text color
+$text_primary: #132041;
+$text_secondary: #00497C;
+$text_tertiary: #8598B4;
+// link color
+$link_primary: #48f;
+
+// siteimage color
+$color_primary: #132041;
+$color_primary-light: lighten( $color_primary, 10% );
+$color_secondary: #8598B4;
+$color_secondary-light: lighten( $color_secondary, 10% );
+$color_secondary-dark: darken( $color_secondary, 20% );
+$color_tertiary: #E7E9EC;
+$color_tertiary-light: lighten( $color_tertiary, 10% );
+$color_quaternary: #998000;
+$color_quaternary-light: lighten( $color_quaternary, 10% );
+// etc.
+$color_etc: #eff3f6;
+
+// monotone color
+$black: #111;
+$black-lighten-25: lighten( $black, 25% );
+$black-lighten-50: lighten( $black, 50% );
+$white: lighten( $black, 100% );
+

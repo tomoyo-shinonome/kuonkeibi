@@ -1,0 +1,35 @@
+.l-main {
+  &__kv {
+    background-size: cover;
+    height: 540px;
+    width: 100%;
+    position: relative;
+    padding-top: 11.5rem;
+    &--items {
+      background: url('../img/img_globalItems_kv.jpg')top center no-repeat;
+      background-size: cover;
+      height: 540px;
+      width: 100%;
+      position: relative;
+    }
+    &--information {
+      background: url("../img/img_globalInformation_kv.jpg") center center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .l-main {
+      &__kv {
+        height: 440px;
+        background-size: cover;
+        word-break: normal;
+        top: 0;
+        padding-top: 8rem;
+
+      }
+  }
+}
+
+

@@ -1,0 +1,544 @@
+@import "foundation/_variable";
+.home {
+  position: relative;
+  z-index: 2;
+  &::before {
+    content: " ";
+    width: 85%;
+    height: 90vh;
+    background: $color_primary;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  &Kv {
+    position: relative;
+    height: 80vh;
+    margin-bottom: 12rem;
+    &__bg {
+      position: absolute;
+      right: 0;
+      width: 75%;
+      height: 830px;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__copy {
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translateY(-50%);
+      z-index: 2;
+      &--en {
+        font-size: 4.8rem;
+        display: block;
+        margin-bottom: 5rem;
+        letter-spacing: .3rem;
+      }
+      &--ja {
+        font-size: 1.8rem;
+        letter-spacing: .3rem;
+        margin-left: 3rem;
+      }
+    }
+  }
+  &KV-Topics {
+    position: absolute;
+    z-index: 2;
+    top: 85%;
+    left: 20%;
+    background: #E7E9EC;
+    width: 430px;
+    height: 170px;
+    padding: 3rem;
+    &__heading {
+      display: flex;
+      align-items: center;
+      &--en {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      &--ja {
+        font-size: 1.2rem;
+      }
+    }
+    .c-list {
+      color: $text_secondary;
+      text-decoration: none;
+      &::after {
+        content: " ";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin: 0 10px;
+        border-top: 2px solid $text_secondary;
+        border-right: 2px solid $text_secondary;
+        transform: rotate(45deg);
+      }
+      &__item {
+        &:nth-child(1) {
+          font-size: 1.2rem;
+          flex: 0 0 20%;
+        }
+        &:nth-child(2) {
+          font-size: 1.4rem;
+          flex: 0 0 70%;
+        }
+      }
+    }
+  }
+  &Scroll {
+    position: absolute;
+    top: 83%;
+    left: 10%;
+    display: flex;
+    span {
+      color: $white;
+      font-size: 1.2rem;
+      writing-mode: vertical-rl;
+    }
+      &::before {
+        content: " ";
+        width: 1px;
+        height: 200px;
+        display: block;
+        background: $white;
+      }
+  }
+  &Business {
+    position: relative;
+    padding: 7rem 0;
+    &::before {
+      content: " ";
+      width: 78%;
+      height: 40vh;
+      display: block;
+      background: $color_tertiary;
+      position: absolute;
+      right: 0;
+      top: 30%;
+      z-index: 0;
+    }
+    &__wrap {
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__cat {
+      position: absolute;
+      top: 35%;
+      left: 8%;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: " ";
+        background: $color_quaternary;
+        display: block;
+        width: 150px;
+        border-width: 25px 15px 25px 0px;
+        border-color: transparent $color_tertiary transparent transparent;
+        border-style: solid;
+        position: absolute;
+        z-index: 0;
+      }
+      span {
+        font-weight: 700;
+        color: $white;
+        letter-spacing: .2rem;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+    &__desc{
+      width: 270px;
+      position: absolute;
+      bottom: 5%;
+      left: 15%;
+    }
+  }
+  &About {
+    padding: 7rem 0;
+    position: relative;
+    &::before {
+      content: " ";
+      width: 65%;
+      height: 50vh;
+      display: block;
+      background: $color_primary;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+    }
+
+    &__wrap {
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__heading {
+      color: $white;
+      text-align: right;
+      margin-bottom: 3rem;
+      &--en {
+        font-size: 4.8rem;
+        letter-spacing: .3rem;
+      }
+
+      &--ja {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__image {
+      width: 48%;
+      flex: 0 0 46%;
+      margin-right: 4rem;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__item {
+      width: 450px;
+    }
+    &__title {
+      color: $white;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    &__desc {
+      color: $white;
+      margin-left: auto;
+      margin-bottom: 3rem;
+    }
+    &__button {
+      width: 300px;
+      height: 60px;
+    }
+  }
+  &Topics {
+    padding: 7rem 0;
+    position: relative;
+    &::before {
+      content: " ";
+      width: 65%;
+      height: 40vh;
+      display: block;
+      background: $color_tertiary;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+    }
+    &__wrap {
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid $color_primary;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    &__heading {
+      color: $text-primary;
+      &--en {
+        font-size: 4.8rem;
+      }
+      &--ja {
+        font-size: 1.2rem;
+      }
+    }
+    &__lists {
+      width: 600px;
+      margin: 0 auto 5rem;
+      padding-bottom:: 5rem;
+    }
+    &__list {
+      border-bottom: 1px dotted $color_primary;
+      padding: .5rem 2rem;
+      .c-list {
+        text-decoration: none;
+        color: $text_secondary;
+        &::after {
+          content: " ";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin: 0 10px;
+          border-top: 2px solid $text_secondary;
+          border-right: 2px solid $text_secondary;
+          transform: rotate(45deg);
+        }
+        &__item {
+          &:nth-child(1) {
+            font-size: 1.2rem;
+            flex: 0 0 20%;
+          }
+          &:nth-child(2) {
+            flex: 0 0 70%;
+          }
+        }
+      }
+    }
+    &__button {
+      width: 300px;
+      height: 60px;
+    }
+  }
+  &Recruit {
+    position: relative;
+    padding: 7rem 0;
+    width: 1000px;
+    margin: 0 auto 12rem;
+    &__heading {
+      text-align: center;
+      margin-bottom: 5rem;
+      &--en {
+        font-size: 4.8rem;
+      }
+      &--ja {
+        font-size: 1.2rem;
+      }
+    }
+    &__wrap {
+      &::before {
+        content: " ";
+        width: 100%;
+        height:28vh;
+        display: block;
+        background: $color_primary;
+        position: absolute;
+        left: 50%;
+        top: 53%;
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+    }
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    &__pics {
+      width: 420px;
+      flex: 0 0 420px;
+      padding: 0 0 0 4rem;
+      margin-right: 4rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__item {
+      &--desc {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+      }
+      &--par {
+        color: $white;
+        width: 80%;
+        margin-bottom: 3rem;
+      }
+    }
+    &__button {
+      width: 300px;
+      height: 60px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .home {
+    &Kv {
+      &__bg {
+        height: 80vh;
+      }
+      &__copy {
+        &--en {
+          font-size: 3rem;
+        }
+        &--ja {
+          font-size: 1.4rem;
+          margin-left: 0;
+        }
+      }
+    }
+    &KV-Topics {
+        width: 80%;
+        padding: 2rem;
+      &__heading {
+        margin-bottom: 2rem;
+      }
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &::after {
+          content: " ";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin: 0 10px;
+          border-top: 2px solid $text_secondary;
+          border-right: 2px solid $text_secondary;
+          transform: rotate(45deg);
+        }
+      }
+      .c-list {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &Business {
+      &::before {
+        height: 80vh;
+        top: 10%;
+      }
+      &__heading {
+        span {
+          display: block;
+        }
+        &--ja {
+          text-align: right;
+        }
+      }
+      &__wrap {
+        width: 90%;
+        flex-direction: column
+      }
+      &__items {
+        margin-bottom: 5rem;
+      }
+      &__cat {
+        top: 20%;
+      }
+      &__desc {
+        bottom: auto;
+        top: 25%;
+      }
+      &__image {
+        margin-top: 300px;
+      }
+    }
+    &About {
+      &::before {
+        width: 100%;
+        height: 120vh;
+      }
+      &__wrap {
+        width: 90%;
+      }
+      &__items {
+        flex-direction: column;
+      }
+      &__item {
+        width: 100%;
+      }
+    }
+    &Topics {
+      background: $color_tertiary;
+      &::before {
+        display: none;
+      }
+      &__wrap {
+        width: 90%;
+      }
+      &__header {
+        flex-direction: column;
+        align-items: baseline;
+      }
+      &__heading {
+        margin-bottom: 5rem;
+      }
+      &__button {
+        align-self: center;
+      }
+      &__lists {
+        width: 90%;
+      }
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::after {
+          content: " ";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin: 0 10px;
+          border-top: 2px solid $text_secondary;
+          border-right: 2px solid $text_secondary;
+          transform: rotate(45deg);
+        }
+        .c-list {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &Recruit {
+      width: 100%;
+      margin-bottom: 0;
+      &__wrap {
+        &::before {
+          top: 40%;
+          height: 90vh;
+        }
+      }
+      &__items {
+        flex-direction: column;
+      }
+      &__item {
+        width: 90%;
+        margin: 0 auto;
+        &--desc {
+          color: $white;
+        }
+      }
+      &__pics {
+        width: 90%;
+        flex-direction: column;
+        flex: 0 0 50%;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+  }
+}
+
+
